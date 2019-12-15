@@ -137,56 +137,58 @@ html {
      }
  }
  
- .btn:link,
- .btn:visited {
-     text-transform: uppercase;
-     text-decoration: none;
-     padding: 15px 40px;
-     display: inline-block;
-     border-radius: 10rem;
-     transition: all .2s;
-     box-shadow: 0 3px 80px rgba(20, 80, 62, 0.8);
-     position: relative;
- 
- }
- .btn:hover {
-     transform: translateY(-4px);
-     box-shadow: 0 1rem 2rem rgba($color-black,.3);
- }
- 
- .btn:active {
-     transform: translateY(-1px);
-     box-shadow: 0 5px 10px rgba($color-black,.2);
- }
- 
- .btn--white {
-     background-color: $color-white;
-     color: #777;
- }
- 
- .btn::after {
-     content: "";
-     display: inline-block;
-     height: 100%;
-     width: 100%;
-     border-radius: 10rem;
-     position: absolute;
-     top: 0;
-     left: 0;
-     z-index: -1;
-     transition: all .4;
- }
- .btn-white::after {
-     background-color: $color-white;
- }
- 
- .btn:hover::after {
-     transform: scaleX(1.4) scaleY(1.6);
-     opacity: 0;
- }
- 
- .btn-animated {
-     animation: moveinBottom .5s ease-out .75s;
-     animation-fill-mode: backwards;
-     
+ .btn {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        box-shadow: 0 3px 80px rgba(20, 80, 62, 0.8);
+        position: relative;
+    
+    }
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 1rem 2rem rgba($color-black,.3);
+    }
+    
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba($color-black,.2);
+    }
+    
+    &--white {
+        background-color: $color-white;
+        color: #777;
+    }
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4;
+    }
+    &-white::after {
+        background-color: $color-white;
+    }
+    
+    &:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+    
+    &-animated {
+        animation: moveinBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+        
+    }
  }

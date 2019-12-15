@@ -20,35 +20,7 @@
  
 
  
- .heading-primary {
-     color: white;
-     text-transform: uppercase;
-     backface-visibility: hidden;
-     padding-bottom: 2rem;
-
-     &--main {
-        display: block;
-        font-size: 6rem;
-        font-weight: 700;
-        letter-spacing: 1.75rem;
-        animation-name:  moveinLeft;
-        animation-duration: 3s;
-        animation-delay: 1.5s;
-        animation-iteration-count: initial;
-        margin-bottom: 2rem;
-   
-    }
-    
-    &--sub {
-        display: block;
-        font-size: 20px;
-        font-weight: 700px;
-        letter-spacing: 17.4px;
-        animation-name: moveinRight;
-        animation-duration: 3s;
-        animation-delay: 1.5s;
-    }
- }
+ 
  
  
  

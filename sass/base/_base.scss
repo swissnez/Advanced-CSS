@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0; 
+    box-sizing: inherit;
+ }
+html {
+    font-size: 62.5%; // 16px 
+}
+ @mixin mainBody($color,$Fontsize) {
+    font-family: "Lato", sans-serif;
+     font-weight: 400;
+     font-size: $Fontsize;
+     line-height: 1.7rem;
+     color: $color; 
+     padding: 3rem;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     @include mainBody($color-purple,1.6rem);
+ }

@@ -8,64 +8,15 @@
 @import "base/utilities";
 @import "base/animations";
 
+@import "components/button";
+
+@import "layouts/header";
+
 @import "pages/home";
 
 
 
 
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0; 
-    box-sizing: inherit;
- }
-html {
-    font-size: 62.5%; // 16px 
-}
- @mixin mainBody($color,$Fontsize) {
-    font-family: "Lato", sans-serif;
-     font-weight: 400;
-     font-size: $Fontsize;
-     line-height: 1.7rem;
-     color: $color; 
-     padding: 3rem;
-     box-sizing: border-box;
- }
- 
- body {
-     @include mainBody($color-purple,1.6rem);
- }
- 
- .header {
-     height: 95vh;
-     background-image: linear-gradient(to right bottom,
-     rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8)),
-     url(../img/SnowboardBulgaria.jpg);
-     background-size: cover;
-     background-position: top;
-     clip-path: polygon(0 0, 100% 0%, 100% 75%,0% 100%);
-     border-radius: 2.5rem;
-
-     &__logo-box {
-        position: absolute;
-        top: 4rem;
-        left: 4rem;
-    }
-    
-    &__logo {
-        height: 3.5rem;
-    }
-    
-    
-    &__text-box {
-        position: absolute;
-        top: 40%;
-        left: 25%;
-        transform: translate(-50,-50);
-        text-align: center;
-    }
- }
  
 
  
@@ -100,99 +51,6 @@ html {
  }
  
  
- @keyframes moveinLeft {
-     0% {
-         opacity: 0;
-         transform: translateX(-100px);
-     }
  
-     50% {
-         transform: translateX(10px);
-     }
  
-     100% {
-         opacity: 1;
-         transform: translateX(0);
-     }
- }
  
- @keyframes moveinRight {
-     0% {
-         opacity: 0;
-         transform: translateX(100px);
-     }
-     50% {
-         transform: translateX(-10px);
-     }
-    
-     100% {
-         opacity: 1;
-         transform: translateX(0);
-     }
- }
- 
- @keyframes moveinBottom {
-     0% {
-         opacity: 0;
-         transform: translateY(20px);
-     }
-     80% {
- 
-     }
- }
- 
- .btn {
-    &:link,
-    &:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 15px 40px;
-        display: inline-block;
-        border-radius: 10rem;
-        transition: all .2s;
-        box-shadow: 0 3px 80px rgba(20, 80, 62, 0.8);
-        position: relative;
-    
-    }
-    &:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 1rem 2rem rgba($color-black,.3);
-    }
-    
-    &:active {
-        transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba($color-black,.2);
-    }
-    
-    &--white {
-        background-color: $color-white;
-        color: #777;
-    }
-    
-    &::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 10rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .4;
-    }
-    &-white::after {
-        background-color: $color-white;
-    }
-    
-    &:hover::after {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
-    }
-    
-    &-animated {
-        animation: moveinBottom .5s ease-out .75s;
-        animation-fill-mode: backwards;
-        
-    }
- }

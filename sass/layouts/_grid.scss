@@ -1,0 +1,23 @@
+.row {
+    max-width: $grid-width;
+    //background-color:rgba(145, 140, 140, 0.509);
+    background-image: linear-gradient(to right bottom,
+    rgba($color-primary-light,0.2),rgba($color-primary-dark,0.4));
+    margin: 0 auto;
+   
+    &:not(:last-child) { //.row:not(:last-child) Select * but not the last row
+        margin-bottom: $gutter-vertical;
+    }
+
+    @include clearfix;
+    
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) /2);
+        background-color: orangered;
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+}

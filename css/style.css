@@ -133,3 +133,20 @@ body {
     left: 25%;
     transform: translate(-50, -50);
     text-align: center; }
+
+.row {
+  max-width: 114rem;
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.2), rgba(40, 180, 133, 0.4));
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) /2);
+    background-color: orangered;
+    float: left; }
+    .row .col-1-of-2:not(:last-child) {
+      margin-right: 6rem; }

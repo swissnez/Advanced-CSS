@@ -48,10 +48,16 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
-  background-image: linear-gradient(to right, #55c57a, #28b485);
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
   display: inline-block;
   -webkit-background-clip: text;
-  color: transparent; }
+  color: transparent;
+  letter-spacing: 2px;
+  padding: 2rem 2rem;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.6); }
 
 @keyframes moveinLeft {
   0% {
@@ -126,7 +132,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/SnowboardBulgaria.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/SnowboardBulgaria.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
@@ -151,7 +157,7 @@ body {
 
 .row {
   max-width: 114rem;
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.2), rgba(40, 180, 133, 0.4));
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.2), rgba(40, 180, 133, 0.4));
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }

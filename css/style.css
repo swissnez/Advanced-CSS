@@ -16,7 +16,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7rem;
-  color: #585a91;
+  color: #777;
   padding: 3rem; }
 
 .heading-primary {
@@ -36,12 +36,20 @@ body {
     margin-bottom: 2rem; }
   .heading-primary--sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700px;
     letter-spacing: 17.4px;
-    animation-name: moveinRight;
+    animation-name: moveinRight 1s ease-out;
     animation-duration: 3s;
     animation-delay: 1.5s; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  background-image: linear-gradient(to right, #55c57a, #28b485);
+  display: inline-block; }
 
 @keyframes moveinLeft {
   0% {
@@ -133,6 +141,11 @@ body {
     left: 25%;
     transform: translate(-50, -50);
     text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -25vh; }
 
 .row {
   max-width: 114rem;

@@ -49,7 +49,9 @@ body {
   font-weight: 700;
   text-align: center;
   background-image: linear-gradient(to right, #55c57a, #28b485);
-  display: inline-block; }
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent; }
 
 @keyframes moveinLeft {
   0% {

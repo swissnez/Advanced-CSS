@@ -1,6 +1,5 @@
 .row {
     max-width: $grid-width;
-    //background-color:rgba(145, 140, 140, 0.509);
     background-image: linear-gradient(to right bottom,
     rgba($color-primary-light,0.2),rgba($color-primary-dark,0.4));
     margin: 0 auto;
@@ -13,7 +12,7 @@
 
     [class^="col"] {
         
-        background-color: orangered;
+        
         float: left;
 
         &:not(:last-child) {

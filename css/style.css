@@ -59,6 +59,12 @@ body {
     transform: skewY(2deg) skewX(15deg);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.6); }
 
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
+
 @keyframes moveinLeft {
   0% {
     opacity: 0;
@@ -166,7 +172,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col"] {
-    background-color: orangered;
     float: left; }
     .row [class^="col"]:not(:last-child) {
       margin-right: 4rem; }

@@ -64,6 +64,7 @@ body {
 
 .paragraph {
     font-size: $default-font-size;
+    line-height: 2.5rem;
     &:not(:last-child) { // Everything except the the last child 
         margin-bottom: 3rem;
     }

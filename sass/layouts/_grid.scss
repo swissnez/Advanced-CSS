@@ -2,6 +2,7 @@
     max-width: $grid-width;
     //background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.2),rgba($color-primary-dark,0.4));
     margin: 0 auto;
+    
    
     &:not(:last-child) { //.row:not(:last-child) Select * but not the last row
         margin-bottom: $gutter-vertical;

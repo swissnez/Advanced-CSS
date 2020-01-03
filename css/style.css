@@ -222,17 +222,27 @@ body {
 
 .card {
   perspective: 150rem;
-  -moz-perspective: 150rem; }
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem; }
   .card__side {
     height: 50rem;
-    transition: all .8s;
-    border-radius: 2rem;
+    transition: all .8s ease;
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 40px rgba(0, 0, 0, 0.15);
     color: white;
-    font-size: 2rem; }
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden; }
     .card__side--front {
-      background-color: rgba(255, 68, 0, 0.338); }
+      background-color: #fff; }
     .card__side--back {
-      background-color: rgba(115, 177, 21, 0.454); }
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
   .card:hover .card__side--front {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {

@@ -220,6 +220,24 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem; }
+  .card__side {
+    height: 50rem;
+    transition: all .8s;
+    border-radius: 2rem;
+    color: white;
+    font-size: 2rem; }
+    .card__side--front {
+      background-color: rgba(255, 68, 0, 0.338); }
+    .card__side--back {
+      background-color: rgba(115, 177, 21, 0.454); }
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/SnowboardBulgaria.jpg);

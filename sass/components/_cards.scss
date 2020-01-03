@@ -1,0 +1,28 @@
+.card { //BEM .card__side--front or back
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+        &__side {
+            
+            height: 50rem;   
+            transition: all .8s;
+            border-radius: 2rem;
+            color: white;
+            font-size: 2rem;
+
+            &--front {
+                background-color: rgba(255, 68, 0, 0.338);
+            }
+
+            &--back {
+                background-color: rgba(115, 177, 21, 0.454);
+            }
+        }
+
+    &:hover &__side--front {
+        transform: rotateY(180deg)
+    }
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+}

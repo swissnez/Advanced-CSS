@@ -76,13 +76,18 @@
         width: 70%;
     }
 
-    &__heading-span {
+    &__heading-span { // H4 heading colors within the rotating cards
         padding: 1rem 1.5rem;
-        //width: 70%;
         -webkit-box-decoration-break:clone;
         box-decoration-break: clone;
         &--1{
             background-image: linear-gradient(to right bottom,rgba($color-secondary-light,.85),rgba($color-secondary-dark,.85))
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom,rgba($color-primary-light,.85),rgba($color-primary-dark,.85));
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom,rgba($color-tertiary-light,.85),rgba($color-tertiary-dark,.85));
         }
     }
     &__details {

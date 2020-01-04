@@ -116,7 +116,7 @@ body {
   display: inline-block;
   border-radius: 10rem;
   transition: all .2s;
-  box-shadow: 0 3px 80px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
   position: relative;
   font-size: 1.6rem; }
 
@@ -283,6 +283,24 @@ body {
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; }
+  .card__price-box {
+    padding: 5rem 0;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    padding: 5rem 0;
+    font-size: 6rem;
+    font-weight: 100; }
 
 .header {
   height: 95vh;

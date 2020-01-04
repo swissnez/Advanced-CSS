@@ -2,11 +2,11 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 50rem;
+    height: 52rem;
 
         &__side {
             
-            height: 50rem;   
+            height: 52rem;   
             transition: all .8s ease;
             border-radius: 1rem;
             box-shadow: 0 1.5rem 40px rgba($color-black,.15);
@@ -57,7 +57,7 @@
         }
     }
     &__heading {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         font-weight: 300;
         text-transform: uppercase;
         text-align: right;
@@ -65,7 +65,7 @@
         position: absolute;
         top: 12rem;
         right: 2rem;
-        width: 75%;
+        width: 70%;
     }
 
     &__heading-span {
@@ -74,6 +74,22 @@
         box-decoration-break: clone;
         &--1{
             background-image: linear-gradient(to right bottom,rgba($color-secondary-light,.85),rgba($color-secondary-dark,.85))
+        }
+    }
+    &__details {
+        padding: 3rem;
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-light-grey-2;  
+                }
+            }
         }
     }
 }

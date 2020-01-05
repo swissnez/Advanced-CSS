@@ -2,5 +2,36 @@
     width: 75%;
     margin: 0 auto;
     box-shadow: 0 3em 6rem rgba($color-black,.1);
-    padding: 6rem;
+    background-color: $color-white;
+    border-radius: 3px;
+    padding: 10rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg);
+
+    & > * {
+        transform: skewX(12deg);
+    }
+  
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        background-color: rgba(211, 145, 22, 0.3);
+        shape-outside: circle(50% at 50% 50%); // Word wrap cirle style 
+        -webkit-shape-outside: circle(50% at 50% 50%); // Support for IE & Chrome/Firefox
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%); //Passport Photo Circle 
+        transform: translateX(-6rem),skewX(12deg);
+    }
+    &__img {
+        height: 100%;
+    }
+
+    &__text {
+        transform: skewX(12deg);
+    }
+    &__caption {
+        
+    }
 }

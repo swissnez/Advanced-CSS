@@ -9,15 +9,15 @@
     rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8)),
     url(../img/nat-4.jpg);
     background-size: cover;
-    transform: skewY(-7deg);
+    transform: skewY(-7deg); // See below attribute
     margin-top: -10rem;
     & > * { // Select * the direct childs within .section-features
-        transform: skewY(7deg); // skew the opposite 7 degrees
+        transform: skewY(7deg); // skew the opposite direction 7 degrees
     }
 }
 
 .section-tours {
     background-color: $color-light-grey-1;
-    padding: 25rem 0 50rem 0;
+    padding: 25rem 0 15rem 0;
     margin-top: -10rem;
 }

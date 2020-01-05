@@ -9,7 +9,7 @@
         &__side {
             height: 52rem;   
             transition: all .8s ease;
-            border-radius: 1rem;
+            border-radius: 2rem;
             box-shadow: 0 1.5rem 40px rgba($color-black,.15);
             font-size: 2rem;
             position: absolute;
@@ -51,6 +51,8 @@
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+        // border-top-left-radius: 3px;
+        // border-top-right-radius: 3px;
 
         &--1 {
             background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark),url(../img/nat-5.jpg);

@@ -2,7 +2,7 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-
+//Remove _ ans .scss 
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
@@ -12,6 +12,7 @@
 @import "components/composition";
 @import "components/feature-box";
 @import "components/cards";
+@import "components/form";
 @import "components/story";
 @import "components/bg-video";
 

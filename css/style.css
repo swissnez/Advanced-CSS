@@ -329,8 +329,8 @@ body {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3em 6rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 1rem;
   padding: 10rem;
   padding-left: 9rem;
   font-size: 1.6rem;
@@ -341,7 +341,6 @@ body {
     width: 15rem;
     height: 15rem;
     float: left;
-    background-color: rgba(211, 145, 22, 0.3);
     shape-outside: circle(50% at 50% 50%);
     -webkit-shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);

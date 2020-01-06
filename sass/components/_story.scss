@@ -1,9 +1,9 @@
 .story {
     width: 75%;
     margin: 0 auto;
-    box-shadow: 0 3em 6rem rgba($color-black,.1);
-    background-color: $color-white;
-    border-radius: 3px;
+    box-shadow: 0 3em 6rem rgba($color-black,.1); // Black box shadow
+    background-color: rgba($color-white,.6); // 60% opacity white background for stories
+    border-radius: 1rem;
     padding: 10rem;
     padding-left: 9rem;
     font-size: $default-font-size;
@@ -18,7 +18,7 @@
         width: 15rem;
         height: 15rem;
         float: left;
-        background-color: rgba(211, 145, 22, 0.3);
+        //background-color: rgba(211, 145, 22, 0.3);
         shape-outside: circle(50% at 50% 50%); // Word wrap cirle style 
         -webkit-shape-outside: circle(50% at 50% 50%); // Support for IE & Chrome/Firefox
         -webkit-clip-path: circle(50% at 50% 50%);

@@ -380,6 +380,10 @@ body {
   width: 100%;
   z-index: -1;
   opacity: .15; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .header {
   height: 95vh;
@@ -424,6 +428,14 @@ body {
 .section-stories {
   padding: 15rem 0;
   position: relative; }
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.book {
+  background-image: url(../img/nat-10.jpg);
+  background-size: cover; }
 
 .row {
   max-width: 114rem;

@@ -8,4 +8,11 @@
     z-index: -1;
     opacity: .15;
 
+    &__content { // place video content itself within container 
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+    }
+
 }

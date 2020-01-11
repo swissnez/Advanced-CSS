@@ -1,5 +1,5 @@
 .form {
-    &__group:not(:last-child) {
+    &__group:not(:last-child) { // Specificity has cascading override, however not !important can overide even this.
         margin-bottom: 2rem;
     }
     &__input {
@@ -27,6 +27,10 @@
             border-bottom: 3px solid $color-secondary-dark;
         }
         
+    }
+
+    &__radio-input { // Hide the default radio buttons 
+        display: none;
     }
   
     
@@ -76,13 +80,12 @@
             transform: translate(-50%,-50%);
             background-color: $color-primary;
             opacity: 0;
-            transition: opacity .2s;
+            transition: opacity .5s;
         }
     }
+
     &__radio-input:checked ~ &__radio-label &__radio-button::after {
         opacity: 1;
-
-    }
-    
+    } 
 }
 

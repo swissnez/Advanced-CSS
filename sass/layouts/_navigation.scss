@@ -1,8 +1,16 @@
 .navigation {
     &__checkbox {
-        
+        display: none;
     }
     &__button {
+        background-color: $color-white;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 2000; // remains on top of everthing even as per __background
 
     }
     &__background { 
@@ -13,18 +21,24 @@
         top: 6.5rem;
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light,$color-primary-dark);
+        z-index: 1000;  // remains on top of everything
     }
 
     &__nav {
-
+        height: 100vh; //view port height 100%
+        width: 100%;
+        position: fixed; // Remains static even when scrolling
+        top: 0; // position the menu <ul>& <li> items in the top right corner 0
+        right:0; // As above 
+        z-index: 1500; // In the middle 
     }
 
     &__list {
-
+          
     }
 
     &__item {
-        
+             
     }
 
     &__link {

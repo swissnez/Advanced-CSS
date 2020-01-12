@@ -34,11 +34,11 @@
     }
 
     &__list {
-          
+        @include fiftyfifty;
     }
 
     &__item {
-             
+              
     }
 
     &__link {

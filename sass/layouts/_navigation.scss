@@ -1,7 +1,14 @@
 .navigation {
     &__checkbox {
         display: none;
+        // z-index: 5000;
+        // &:hover ~ &__button {
+        //     color: aquamarine;
+        // }
     }
+    
+
+    
     &__button {
         background-color: $color-white;
         height: 7rem;
@@ -11,7 +18,8 @@
         right: 6rem;
         border-radius: 50%;
         z-index: 2000; // remains on top of everthing even as per __background
-
+        box-shadow: 0 1rem 3rem rgba($color-black,0.2); 
+        
     }
     &__background { 
         height: 6rem;
@@ -22,7 +30,8 @@
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light,$color-primary-dark);
         z-index: 1000;  // remains on top of everything
-        transform: scale(80); 
+        //transform: scale(80); 
+        transition: transform .8s;
     }
 
     &__nav {
@@ -32,6 +41,9 @@
         top: 0; // position the menu <ul>& <li> items in the top right corner 0
         right:0; // As above 
         z-index: 1500; // In the middle 
+        opacity: 0;
+        width: 0;
+        transition: opacity .8s;
     }
 
     &__list {
@@ -56,21 +68,29 @@
             background-image: linear-gradient(120deg,rgba(transparent, 0) 0%, rgba(transparent,0) 50%, $color-white 50%);
             background-size: 220%; // Cover the entire background as much as possible
             transition: all .8s; // slow transition of animation 
+
+            span { // <ul> Numbers 01 - 04 
+                padding-right: 1.5rem;
+                display: inline-block;
+            }
     }
 
-    &:hover,
-    &:active {
-        background-position: 100%;
-        color: $color-primary-dark; // show the 'green' whilst the background is white.
-        transform: translateX(-5rem); //Move 50px left  
-        span {
-            padding-right: 1.5rem;
-            display: inline-block;
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-primary-dark; // show the 'green' whilst the background is white.
+            transform: translateX(-5rem); //Move 50px left  
+            
         }
     }
-
-
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+        
+    }
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+        
     }
     
-
 }

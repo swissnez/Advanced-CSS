@@ -1,13 +1,5 @@
 .navigation {
-    &__checkbox {
-        display: none;
-        // z-index: 5000;
-        // &:hover ~ &__button {
-        //     color: aquamarine;
-        // }
-    }
-    
-
+   
     
     &__button {
         background-color: $color-white;
@@ -19,6 +11,8 @@
         border-radius: 50%;
         z-index: 2000; // remains on top of everthing even as per __background
         box-shadow: 0 1rem 3rem rgba($color-black,0.2); 
+        text-align: center;
+        cursor: pointer;
         
     }
     &__background { 
@@ -81,17 +75,57 @@
             background-position: 100%;
             color: $color-primary-dark; // show the 'green' whilst the background is white.
             transform: translateX(-5rem); //Move 50px left  
-            
         }
     }
+
+    //Functionality 
     &__checkbox:checked ~ &__background {
         transform: scale(80);
         
     }
     &__checkbox:checked ~ &__nav {
-        opacity: 1;
+        opacity: 1; //show 
         width: 100%;
         
     }
-    
+    &__checkbox { // Hide the checkbox during homepage load
+        display: none;
+      
+    }
+
+    //ICON animation ::before and after effects
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+                    //!!!---- HAMBUGER MENU----- 
+        &,          // 1) The Icon element itself
+        &::before, // 2) The peusdo element before
+        &::after{ // 3) The peusdo element after 
+            width: 3rem;
+            height: 2px; // Remains in pixel so it doesn't change unlike rem does with responsive 
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+        }
+        &::before, 
+        &::after {
+            content: ""; // We need to set the content despite being nothing to trick element(s) to being present  
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+        &::before {top: -.8rem;} // Distance for the hambuger's layers (TOP)
+        &::after {top: .8rem;} //Bottom
+    }
+
+    &__button:hover &__icon::before { // On button's hover  
+        top: -1rem; //Move up 10px (top layer)
+    }
+    &__button:hover &__icon::after {
+        top: 1rem; // Move down 10px (bottom layer)
+    }
+    // Once checkbox checked use the child element icon within the button class
+    &__checkbox::checked + &__button &__icon {
+        background-color: transparent;
+    }
 }

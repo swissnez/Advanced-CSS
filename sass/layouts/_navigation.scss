@@ -103,7 +103,7 @@
         &::before, // 2) The peusdo element before
         &::after{ // 3) The peusdo element after 
             width: 3rem;
-            height: 2px; // Remains in pixel so it doesn't change unlike rem does with responsive 
+            height: 2px; // Remains in pixel so it doesn't change unlike rem does with responsive design
             background-color: $color-grey-dark-3;
             display: inline-block;
         }
@@ -112,12 +112,12 @@
             content: ""; // We need to set the content despite being nothing to trick element(s) to being present  
             position: absolute;
             left: 0;
-            transition: all .2s;
+            transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
         &::before {top: -.8rem;} // Distance for the hambuger's layers (TOP)
         &::after {top: .8rem;} //Bottom
     }
-
+    // ---- :hover section for both before & after 
     &__button:hover &__icon::before { // On button's hover  
         top: -1rem; //Move up 10px (top layer)
     }
@@ -125,7 +125,19 @@
         top: 1rem; // Move down 10px (bottom layer)
     }
     // Once checkbox checked use the child element icon within the button class
-    &__checkbox::checked + &__button &__icon {
+    &__checkbox:checked + &__button &__icon { // __button is sibling of __checkbox
         background-color: transparent;
     }
+
+    &__checkbox:checked + &__button &__icon:after {
+        top: 0;
+        transform: rotate(45deg);
+       
+    }
+    &__checkbox:checked + &__button &__icon:before {
+        top: 0;
+        transform: rotate(-45deg);
+        
+    }
+
 }
